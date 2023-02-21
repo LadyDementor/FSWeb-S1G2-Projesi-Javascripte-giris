@@ -9,8 +9,8 @@ Bu "sprint 1 - gün 2" projesi görevini kendi başınıza yapmanız beklenmekte
 ## Amaçlar
 
 - let, const, var kullanın ve farklarını gösterin.
-- farklı operatörleri anlayın ve kullanın.
-- basit bir loop / while loop döngüsü yazın.
+-X farklı operatörleri anlayın ve kullanın.
+-X basit bir loop / while loop döngüsü yazın.
 - if/else ifadeleri kullanarak kontroller yazın.
 - function, declarations, expressions ve arrow functions kullanın ve farklarını anlatın.
   
