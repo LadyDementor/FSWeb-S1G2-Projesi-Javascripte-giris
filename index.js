@@ -19,6 +19,13 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+let surucuYasi = 36
+if (surucuYasi>18 )
+{console.log('true')}
+else
+{console.log('false')}
+
+
 
 
 
@@ -35,6 +42,12 @@ Aşağıdakileri yapınız:
 */
 
 
+let birinciDeger = 10;
+let ikinciDegeri = 20;
+if(birinciDeger< ikinciDegeri)
+{console.log(birinciDeger = 15)};
+
+
 
 
 
@@ -49,6 +62,10 @@ Aşağıdakileri yapın:
    İPUCU: Number metoduna bakabilirsin
 */
 
+var string='1999';
+var string=1999;
+console.log(string);
+
 
 
 
@@ -61,9 +78,13 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamlayın:
    3. console.log(carpma(7,4)) ile yazdığınız fonsiyonu test edin. Console'da sonucu 28 olarak görmelisiniz.
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+
+
+function carpma(a,b){
+  return (a * b);
 }
+console.log(carpma(7,4))
+
 
 
 
@@ -77,9 +98,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(yas){
+  return (yas * 7);
 }
+console.log(kopeginYasi(6));
 
 
 
@@ -98,6 +120,7 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar){
+  return 
   /*buraya kodunu yazabilirsin*/
 }
 
@@ -105,9 +128,7 @@ function oyun(oyuncu, bilgisayar){
 /*
 Öncelikle aşağıdakileri yapın:
 1. Bilgisayarın seçimini rastgele oluşturacağımız bir fonksiyon tanımlayın. Örn: 
-   function bilgisayarinSecimi() {
-   
-   }
+  
 2. Fonsiyonun içinde bilgisayarın seçimi için bir değişken tanımlayın
 3. Math.random'ı kullanarak bilgisayarın seçimini oluşturun (Math.random 0-1 arasında bir değer verecek)
 4. Bu rastgele değeri "Taş", "Kağıt" veya "Makas"a dönüştüren bir koşul oluşturun
@@ -116,6 +137,41 @@ function oyun(oyuncu, bilgisayar){
 Şimdi kendi seçtiğiniz bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığınız oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
+
+function bilgisayarinSecimi() {
+  let bilgisayar = '';
+  let a = Math.floor(Math.random() * 3);
+  if (a == 0) {
+    bilgisayar = 'taş';
+  } else if (a == 1) {
+    bilgisayar = 'makas';
+  } else {
+    bilgisayar = 'kağıt';
+  }
+  return bilgisayar;
+}
+
+function oyun1(bilgisayarinSecimi) {
+  let sonuc = '';
+
+  if (bilgisayarinSecimi == 'makas') {
+    sonuc = 'Kazandın!';
+  } else if (bilgisayarinSecimi == 'tas') {
+    sonuc = 'Beraberlik';
+  } else {
+    sonuc = 'Kaybettin!';
+  }
+
+  return sonuc;
+}
+
+let bilgisayarSecimi = bilgisayarinSecimi();
+let sonuc = oyun1(bilgisayarSecimi);
+console.log('Bilgisayarın seçimi: ' + bilgisayarSecimi);
+console.log('Sonuç: ' + sonuc);
+
+
+
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -127,9 +183,21 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+
+
+function milDonusturucu(km){
+  
+ return (km*0.621371);
+  
 }
+  
+  console.log(milDonusturucu(3));
+
+
+
+  
+
+
 
 
 
@@ -143,9 +211,14 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
-}
+function feetDonusturucu(santimetre){
+  return (santimetre / 30.48);
+  
+ }
+ 
+ console.log(feetDonusturucu(60.96));
+
+
 
 
 
@@ -162,8 +235,16 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(maymun){
+  let sarki= maymun + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+
+console.log(sarki);
+return (sarki);
+}
+  let maymun=5;
+      for(let i=maymun ; i >= 1; i--){
+        cocukSarkisi(i);
+    
 }
 
 
@@ -182,9 +263,30 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(notu){
+  let harfnotu='';
+  if(notu>=90){
+    harfnotu='A aldın';
+  }
+  else if(notu>=80 & notu<90){
+    harfnotu='B aldın';
+  }
+else if(notu>=70 & notu<80){
+  harfnotu='C aldın'}
+  else if(notu>=60 & notu<70){
+    harfnotu='D aldın';
+  }
+    else{
+    harfnotu='F aldın';
+  }
+  
+return harfnotu;
 }
+console.log(notHesapla(88));
+  
+
+
+
 
 
 
